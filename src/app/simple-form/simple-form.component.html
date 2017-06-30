@@ -1,0 +1,5 @@
+<form action="">
+  <input #myInput type="text" [(ngModel)]="inputMsg" [ngModelOptions]="{standalone: true}">
+  <!--<button (click)="onClick(myInput.value)">Click me!</button>-->
+  <button (click)="update.emit({text: inputMsg})">Click me!</button>
+</form>

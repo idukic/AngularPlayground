@@ -1,3 +1,4 @@
+import _ from "lodash";
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -8,6 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class SimpleFormComponent implements OnInit {
 
   @Input() inputMsg;
+  @Input() inputCalc;
   @Output() update = new EventEmitter();
 
   constructor() {
@@ -17,11 +19,15 @@ export class SimpleFormComponent implements OnInit {
   ngOnInit() {
   }
 
-
   onClick(event, value){
     // event == MouseEvent (https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent)
     console.log(event);
     console.log(value);
+  }
+
+  onBtnTwoClick(){
+    let calc = _.add(3,4);
+    console.log(calc);
   }
 
 }

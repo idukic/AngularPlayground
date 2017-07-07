@@ -12,6 +12,8 @@ import { MailService } from './mail.service';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeModule } from './home/home.module';
 import { TodoModule } from './todo/todo.module';
+import { TodoStore } from './services/store';
+import { PSightModule } from './p-sight/p-sight.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { TodoModule } from './todo/todo.module';
     // App Modules
     HomeModule,
     TodoModule,
+    PSightModule,
+    
     // Routing Modules
     AppRoutingModule
 
@@ -32,7 +36,9 @@ import { TodoModule } from './todo/todo.module';
   providers: [
     // useClass, useValue
     MailService,
+    TodoStore,
     {provide: 'mail', useClass:MailService},
+    {provide: 'todo', useClass: TodoStore },
     {provide: 'api', useValue: 'http://localhost:3000/'}
   ],
   bootstrap: [AppComponent]

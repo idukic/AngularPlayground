@@ -1,25 +1,67 @@
-// https://github.com/tastejs/todomvc/blob/gh-pages/examples/angular2/app/services/store.ts
+import { Injectable } from '@angular/core';
 
-export class Todo {
+import { Todo } from './todo';
 
-    // current state
-    completed: Boolean;
-    editing: Boolean;
+@Injectable()
+export class TodoStore {
 
-    private _title: String;
-    get title() {
-        return this._title;
+    todos: Array<Todo>;
+
+    constructor() {
+        let persistedTodos = JSON.parse(localStorage.getItem("a2-todos") || '[]');
+        // Normalize back into classes
+        this.todos = persistedTodos.map( (todo: {_title: String, compleated: Boolean }) => { 
+            let ret = new Todo(todo._title);
+            ret.completed = todo.compleated;
+            return ret;
+
+        });
+
     }
 
-    set title(value: String){
-        this._title = value.trim();
+    private updateStore(){
+        localStorage.setItem('a2-todos', JSON.stringify(this.todos));
     }
 
-    constructor(title: String){
-        this.completed = false;
-        this.editing = false;
-        this.title = title.trim();
+    private getWithCompleted(completed: Boolean){
+        return this.todos.filter((todo: Todo) => todo.completed === completed)
     }
 
+    allCompleted() {
+		return this.todos.length === this.getCompleted().length;
+	}
+
+    setAllTo(completed: Boolean) {
+            this.todos.forEach((t: Todo) => t.completed = completed);
+            this.updateStore();
+    }
+
+	removeCompleted() {
+		this.todos = this.getWithCompleted(false);
+		this.updateStore();
+	}
+
+	getRemaining() {
+		return this.getWithCompleted(false);
+	}
+
+	getCompleted() {
+		return this.getWithCompleted(true);
+	}
+
+	toggleCompletion(todo: Todo) {
+		todo.completed = !todo.completed;
+		this.updateStore();
+	}
+
+	remove(todo: Todo) {
+		this.todos.splice(this.todos.indexOf(todo), 1);
+		this.updateStore();
+	}
+
+	add(title: String) {
+		this.todos.push(new Todo(title));
+		this.updateStore();
+	}
 }
 

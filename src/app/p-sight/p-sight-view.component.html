@@ -1,3 +1,18 @@
-<p>
-  p-sight works!
-</p>
+<h1>{{title}}</h1>
+
+<div [style.color]="cssColor">
+  Hello {{name}}
+</div>
+<br/>
+<!--<input type="text" [value]="name" (blur)="name = $event.target.value">--> 
+<input type="text" [(ngModel)]="name">
+<button (click)="changeTextColor()">Change text color</button>
+
+<br/>
+<!--<ul>
+  <li *ngFor="let cust of customers">
+    <app-customer [customer]="cust" [cssColor]="cssColor"></app-customer>
+  </li>
+</ul>-->
+
+<app-customers-list></app-customers-list>

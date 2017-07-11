@@ -14,6 +14,7 @@ import { HomeModule } from './home/home.module';
 import { TodoModule } from './todo/todo.module';
 import { TodoStore } from './services/store';
 import { PSightModule } from './p-sight/p-sight.module';
+import { CustomersModule } from './components/customer/customer-list.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { PSightModule } from './p-sight/p-sight.module';
     HomeModule,
     TodoModule,
     PSightModule,
+    CustomersModule,
     
     // Routing Modules
     AppRoutingModule

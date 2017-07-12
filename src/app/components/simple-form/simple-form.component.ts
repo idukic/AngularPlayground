@@ -3,8 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-simple-form',
-  templateUrl: './simple-form.component.html',
-  styleUrls: ['./simple-form.component.css']
+  templateUrl: './simple-form.component.html'
 })
 export class SimpleFormComponent implements OnInit {
 

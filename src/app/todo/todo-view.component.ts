@@ -5,7 +5,7 @@ import {Todo} from '../services/todo';
 @Component({
   selector: 'app-todo-view',
   templateUrl: './todo-view.component.html',
-  styleUrls: ['./todo-view.component.css']
+  styleUrls: ['./todo-view.component.scss']
 })
 
 export class TodoViewComponent {

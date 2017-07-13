@@ -1,6 +1,10 @@
 <form action="">
-  <input #myInput type="text" [(ngModel)]="inputMsg" [ngModelOptions]="{standalone: true}">
-  <!--<button (click)="onClick(myInput.value)">Click me!</button>-->
-  <button (click)="update.emit({text: inputMsg})">Click me!</button>
-  <button (click)="onBtnTwoClick()">Click me!</button>
+   <div class="form-group">
+      <div class="input-group">
+        <input class="form-control" #myInput type="text" [(ngModel)]="inputMsg" [ngModelOptions]="{standalone: true}">
+        <!--<button (click)="onClick(myInput.value)">Click me!</button>-->
+        <button class="btn btn-default" (click)="update.emit({text: inputMsg})">Click me!</button>
+        <button class="btn btn-primary" (click)="onBtnTwoClick()">Click me!</button>
+    </div>
+  </div>
 </form>

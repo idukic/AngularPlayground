@@ -1,13 +1,20 @@
-<nav>
-    <a routerLink="/" routerLinkActive="active">Home |</a>
-    <a routerLink="/todo" routerLinkActive="active">Todo |</a>
-    <a routerLink="/page-3" routerLinkActive="active">Sight</a>
-</nav>
-<br>
-<main>
-  <router-outlet></router-outlet>
-</main>
-<br>
-<footer>
-  Footer
-</footer>
+
+  <header> 
+      <div class="container">
+          <a routerLink="/" class="logo"></a>
+          <a routerLink="/" routerLinkActive="active">Home</a>
+          <a routerLink="/todo" routerLinkActive="active">Todo</a>
+          <a routerLink="/page-3" routerLinkActive="active">Sight</a>
+      </div>
+  </header>
+  <br>
+  <main>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+  </main>
+  <br>
+  <footer>
+    Footer
+  </footer>
+

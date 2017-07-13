@@ -1,6 +1,6 @@
 export class Theme {
 
-    protected customers = ['brand-one'];
+    protected customers = ['brand-one, brand-two'];
     protected generic = 'generic';
 
     protected setThemeByClass(): void {
@@ -22,7 +22,7 @@ export class Theme {
                 return name;
             }
         });
-        //return name;
+
         return 'brand-one';
     }
 

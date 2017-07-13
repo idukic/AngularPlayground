@@ -1,6 +1,17 @@
 /*
  * SITE.SCSS
+ * 
  */
 
-@import "./modules/colors";
+// Boostrap (colors, varables, ...)
+// ------------------------------------------------
+@import '../../node_modules/bootstrap/scss/bootstrap-flex.scss';
+
+// Modules (colors, varables, ...)
+// ------------------------------------------------
+@import "./modules/base";
+@import "./modules/variables";
+
+// Layout (header, footer, ...)
+// ------------------------------------------------
 @import "./layout/layout";

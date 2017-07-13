@@ -23,7 +23,7 @@ export class Theme {
             }
         });
 
-        return 'brand-one';
+        return 'brand-two';
     }
 
     private setDefaultThemeByClass() {

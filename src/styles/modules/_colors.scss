@@ -1,3 +1,22 @@
 
-$brand-default: green;
-$brand-primary: red;
+$gray-base: #000!default;
+$gray-dark: #767676!default;
+$gray-light: #E5E8E8!default;
+
+$blue: #0096D6!default;
+$blue-light: lighten($blue, 20%)!default;
+
+$green: #008424!default;
+$green-light: lighten($green, 20%)!default;
+
+$purple: #822980!default;
+$purple-light: lighten($purple, 20%)!default;
+
+$orange: #D7410B!default;
+$orange-light: lighten($orange, 20%)!default;
+
+// GLOBAL color variables
+//-----------------------
+
+$brand-default: $green!default;
+$brand-primary: $purple!default;

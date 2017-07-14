@@ -14,8 +14,9 @@ const envTheme_Prod = "prod";
 
 export class AppComponent extends Theme implements  OnInit {
   envTheme: string = environment.envTheme;
-  
+  //cookie?
   ngOnInit() {
+    
     console.log("Current environment", this.envTheme);
 
     if(this.envTheme === envTheme_Dev){

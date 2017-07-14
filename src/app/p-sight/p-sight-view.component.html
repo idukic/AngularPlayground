@@ -4,10 +4,14 @@
   Hello {{name}}
 </div>
 <br/>
+ <div class="form-group">
+      <div class="input-group">
 <!--<input type="text" [value]="name" (blur)="name = $event.target.value">--> 
-<input type="text" [(ngModel)]="name">
-<button (click)="changeTextColor()">Change text color</button>
-
+<input class="form-control" type="text" [(ngModel)]="name">
+<button class="btn btn-primary" (click)="changeTextColor()">Change text color</button>
+</div>
+</div>
+<br/>
 <br/>
 <!--<ul>
   <li *ngFor="let cust of customers">

@@ -14,16 +14,16 @@ export class Theme {
     }
 
     private getCustomerNameIfExist(): string {
-        const URL = location.href;
-        let name = '';
-        this.customers.forEach(customer => {
-            if (URL.includes(customer)) {
-                name = customer;
-                return name;
-            }
-        });
+        // const URL = location.href;
+        // let name = '';
+        // this.customers.forEach(customer => {
+        //     if (URL.includes(customer)) {
+        //         name = customer;
+        //         return name;
+        //     }
+        // });
 
-        return 'brand-two';
+        return 'brand-one';
     }
 
     private setDefaultThemeByClass() {

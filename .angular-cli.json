@@ -23,8 +23,7 @@
       ],
       "stylePreprocessorOptions": {
           "includePaths": [
-              "./styles/themes/envs",
-              "./styles/themes/brands"
+              "./styles"
           ]
       },
       "scripts": [],

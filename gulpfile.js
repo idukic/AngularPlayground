@@ -6,7 +6,7 @@ var gulp = require('gulp'),
  */
 
 var sass = {
-    sassRoot: './src/*.scss',
+    sassRoot: './src/styles/*.scss',
     sassApp: './src/app/**/**/**/*.scss'
 };
 
